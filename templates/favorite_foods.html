@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+<h1>{{title}}</h1>
+    <hr>
+    <h2>รายการอาหารที่ฉันแซ่บนัว:</h2>
+    <ol>
+        <li>{{ foods[0] }}</li>
+        <li>{{ foods[1] }}</li>
+        <li>{{ foods[2] }}</li>
+        <li>{{ foods[3] }}</li>
+        <li>{{ foods[4] }}</li>
+    </ol>
+    <h2>รายการกีฬาที่ฉันแซ่บนัวที่ for loop:</h2>
+    <ol>
+        {% for food in foods %}
+        <li><h3>{{ food }}</h3></li>
+        {% endfor %}
+    </ol>
+    {% endblock %}
+
+
+
